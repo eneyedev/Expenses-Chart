@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  --Soft-Red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-Brown: hsl(25, 47%, 15%);
+  --Medium-Brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-Pale-Orange: hsl(33, 100%, 98%);
+  font-family: "DM Sans", sans-serif;
+  background: var(--Cream);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  align-items: center;
+  place-items: center;
+  place-self: center;
+  place-content: center;
+}
+
+.wrapper {
+  /*width: 90%;*/
+  /*max-width: 1440px;*/
+  margin: auto;
+}
+
+.EC-Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--Soft-Red);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: inherit;
+  margin: 0 auto 1rem auto;
+}
+
+.EC-Header .bal {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.EC-Header .bal li {
+  color: var(--Very-Pale-Orange);
+}
+
+.EC-Header .bal li:first-child {
+  font-size: 18px;
+}
+
+.EC-Header .bal li:last-child {
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.EC-Spending {
+  background: var(--Very-Pale-Orange);
+  padding: 1rem;
+  width: inherit;
+  margin: auto;
+  border-radius: 0.5rem;
+}
+
+.EC-Spending .intro {
+  margin-top: 0.5rem;
+}
+
+.EC-Spending .intro h2 {
+  color: var(--Dark-Brown);
+}
+
+.EC-Spending .BarCharts {
+  margin: 4rem auto 0 auto;
+  width: 100%;
+  max-width: 50%;
+}
+
+.EC-Spending .BarCharts ul {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1rem;
+  margin: auto;
+}
+
+.EC-Spending .BarCharts ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.EC-Spending .BarCharts ul li .none {
+  color: var(--Very-Pale-Orange);
+  background: var(--Dark-Brown);
+  padding: 0.78rem;
+  position: absolute;
+  border-radius: 0.5rem;
+  top: -3.5rem;
+  z-index: 2;
+  display: none;
+}
+
+.EC-Spending .BarCharts ul li:hover .none {
+  display: block;
+}
+
+.EC-Spending .BarCharts ul li:hover .chrtOrg,
+.EC-Spending .BarCharts ul li:hover .chrtBlue {
+  opacity: 0.8;
+}
+
+.EC-Spending .BarCharts ul li span:last-child {
+  color: var(--Medium-Brown);
+}
+
+.EC-Spending .BarCharts ul li .chrtOrg {
+  padding: 1rem;
+  background: var(--Soft-Red);
+  border-radius: 0.3rem;
+  display: block;
+  cursor: pointer;
+}
+
+.EC-Spending .BarCharts ul li .chrtBlue {
+  padding: 1rem;
+  background: var(--Cyan);
+  border-radius: 0.3rem;
+  height: 170px;
+  cursor: pointer;
+  display: block;
+}
+
+.EC-Spending .BarCharts ul li:nth-child(1) .chrtOrg {
+  height: 60px;
+  display: block;
+}
+
+.EC-Spending .BarCharts ul li:nth-child(2) .chrtOrg {
+  height: 100px;
+  display: block;
+}
+
+.EC-Spending .BarCharts ul li:nth-child(4) .chrtOrg {
+  height: 90px;
+  display: block;
+}
+
+.EC-Spending .BarCharts ul li:nth-child(5) .chrtOrg {
+  height: 70px;
+  display: block;
+}
+
+.EC-Spending .BarCharts ul li:nth-child(6) .chrtOrg {
+  height: 130px;
+  display: block;
+}
+
+.EC-Spending .BarCharts ul li:nth-child(7) .chrtOrg {
+  height: 75px;
+  display: block;
+}
+
+.line {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.line:before {
+  content: "";
+  padding: 0.1rem;
+  background: var(--Cream);
+  display: flex;
+}
+
+.EC-Concl {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.EC-Concl .TTM ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.EC-Concl .TTM ul li:first-child {
+  color: var(--Medium-Brown);
+  font-size: 15px;
+}
+
+.EC-Concl .TTM ul li:last-child {
+  color: var(--Dark-Brown);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.EC-Concl .FLM ul li:first-child {
+  color: var(--Dark-Brown);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.EC-Concl .FLM ul li:last-child {
+  color: var(--Medium-Brown);
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .EC-Spending .BarCharts ul {
+    gap: 2rem;
+  }
+}
